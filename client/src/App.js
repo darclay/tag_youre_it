@@ -1,25 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import PostCard from './components/CenterPanel/components/PostCard/PostCard'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   
+      <div className="App">
+        <Router>
+          <Routes>
+            <Route path="/" element=""/>
+            <Route path="/postCard" element={<PostCard />} />
+          </Routes>
+        </Router>
+      </div>
+  )
 }
-
-export default App;
