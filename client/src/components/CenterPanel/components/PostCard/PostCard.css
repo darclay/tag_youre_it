@@ -1,0 +1,49 @@
+.PostCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(229, 228, 226);
+}
+.postContainer {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  background-color: white;
+  border: 1px solid #E28750;
+  border-radius: 10px;
+}
+.userLeft {
+  position: absolute;
+  left: 25px;
+  top: -25px;
+}
+.userPic {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.userName {
+  margin-top: 5px;
+}
+
+.tagRight {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+.tagRight ul {
+  display: flex;
+}
+.tagRight ul li {
+  list-style: none;
+  height: 20px;
+  width: 20px;
+}
+.tagIcons {
+  height: 100%;
+  width: 100%;
+}
