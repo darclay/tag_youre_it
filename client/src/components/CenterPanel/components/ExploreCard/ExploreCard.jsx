@@ -27,16 +27,15 @@ export default function ExploreCard() {
       tagName: "YOUTH OUTREACH"  
     },
     {
-      tagImg: "",
+      tagImg: "https://i.imgur.com/zS6a6UN.png",
       tagName: "AID HOMELESS"
     }
   ]
 
-
   return (
     <div className="ExploreCard">
-      <img src="#" alt="tag"/>
-      <p className="tagName">CHARITY</p>
+      <img className="tagImg" src={tags[0].tagImg} alt="tag"/>
+      <p className="tagName">{tags[0].tagName}</p>
     </div>
   )
 }

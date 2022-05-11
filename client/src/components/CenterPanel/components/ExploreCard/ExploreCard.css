@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.ExploreCard {
+  height: 200px;
+  width: 250px;
+  text-align: center;
+}
+.tagImg {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
