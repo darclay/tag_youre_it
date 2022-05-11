@@ -3,13 +3,17 @@
   padding: 0;
 }
 .ExploreCard {
-  height: 200px;
-  width: 250px;
+  height: 100px;
+  width: 150px;
   text-align: center;
   cursor: pointer;
 }
 .tagImg {
   width: 100%;
-  height: auto;
+  height: 75%;
   border-radius: 5px;
+}
+.tagName {
+  font-size: .6em;
+  font-weight: bold;
 }

@@ -1,0 +1,16 @@
+.ExploreContainerDiv {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  padding: 25px;
+  background-color: white;
+  border: 1px solid #F7B06E;
+  border-radius: 25px;
+}
+.exploreFlexContainer {
+  display: flex;
+  gap: .5em;
+}
+.exploreTitle {
+  font-size: 1em;
+}
