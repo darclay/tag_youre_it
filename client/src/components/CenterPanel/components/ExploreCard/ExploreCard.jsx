@@ -33,7 +33,7 @@ export default function ExploreCard() {
   ]
 
   return (
-    <div className="ExploreCard">
+    <div className="ExploreCard" onClick={()=>{console.log('clicked')}}>
       <img className="tagImg" src={tags[0].tagImg} alt="tag"/>
       <p className="tagName">{tags[0].tagName}</p>
     </div>
