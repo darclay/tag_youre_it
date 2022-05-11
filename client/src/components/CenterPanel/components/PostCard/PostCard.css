@@ -44,7 +44,9 @@
   display: flex;
   padding-left: 5px;
 }
-/* GOING TO HAVE TO FIGURE OUT HOW TO OVERLAP ICONS PROGRESSIVELY FOR EARCH LIST ITEM IN THE 'membersIcons' UL */
+/* GOING TO HAVE TO FIGURE OUT HOW TO OVERLAP ICONS PROGRESSIVELY FOR EARCH LIST ITEM IN THE 'membersIcons' UL
+
+perhaps add only 3 or 5 of the users*/
 .second {
   margin-left: -10px;
 }
