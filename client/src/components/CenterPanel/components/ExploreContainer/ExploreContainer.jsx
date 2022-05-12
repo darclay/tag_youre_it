@@ -34,10 +34,10 @@ export default function ExploreContainer() {
   ]
   return (
     <div className="ExploreContainerDiv">
-      <h1 className="exploreTitle">EXPLORE TAGS</h1>
-      <div className="exploreFlexContainer">
-        <ExploreCard tags ={tags}/>
-      </div>
-    </div>
+       <h1 className="exploreTitle">EXPLORE TAGS</h1>
+       <div className="exploreFlexContainer">
+         <ExploreCard tags ={tags}/> 
+       </div>
+     </div>
   )
 }

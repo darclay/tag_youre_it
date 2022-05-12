@@ -12,7 +12,7 @@ export default function App() {
           <Routes>
             <Route path="/" element=""/>
             <Route path="/postCard" element={<PostCard />} />
-            <Route path="/explore" element={<Explore/>} />
+            <Route path="/explore" element={<Explore/>}>test</Route>
           </Routes>
         </Router>
       </div>
