@@ -1,4 +1,4 @@
-# Finstagram
+# Tag You're It
 
 <!-- REMOVE UNNECESSARY LINKS -->
 
@@ -206,7 +206,7 @@ src
 | Name            | Role                            | Github                           | Portfolio                                      | LinkedIn                                                   |
 | :-------------- | :------------------------------ | :------------------------------- | :--------------------------------------------- | :--------------------------------------------------------- |
 | Johnny Domingo  | Full Stack Engineer             | https://github.com/johnnydomingo | https://www.jdomingo.dev/                      | https://www.linkedin.com/in/johnnydomingo/                 |
-| Julia Dwyer     | Full Stack Engineer             | https://github.com/gooliajulia   | https://juliadwyerportfolio.netlify.app/       | https://www.linkedin.com/in/julia-dwyer-software-engineer/ |
+| Julia Dwyer     | Full Stack Engineer             | https://github.com/gooliajulia   | https://juliadwyer.com/       | https://www.linkedin.com/in/julia-dwyer-software-engineer/ |
 | David Gurule    | Full Stack Engineer             | https://github.com/darclay       | https://david-gurule-jr-portfolio.netlify.app/ | https://www.linkedin.com/in/david-gurule-865624212/        |
 | Paige Hoeppner  | Full Stack Engineer             | https://github.com/thepaiger     | https://www.paigehoeppner.com/                 | https://www.linkedin.com/in/paige-hoeppner/                |
 | Lance Simmons   | Launch Consultant (Engineering) | https://github.com/lancehsimmons | https://lancesimmons.dev/                      | https://www.linkedin.com/in/lance-simmons/                 |
