@@ -1,4 +1,4 @@
-# Finstagram
+# Tag You're It
 
 <!-- REMOVE UNNECESSARY LINKS -->
 
@@ -84,93 +84,93 @@
 
 src
 |__ assets/
-      |__ fonts ??
-      |__ graphics ??
-      |__ icons ??
-      |__ images ??
+    |__ fonts ??
+    |__ graphics ??
+    |__ icons ??
+    |__ images ??
 |__ components/
-      |__ TopBanner
-            |__ TopBanner.css
-            |__ TopBanner.jsx
-                |__ Components
-                    |__ TagLogo
-                          |__ TagLogo.css
-                          |__ TagLogo.jsx
-                    |__ SearchBar
-                          |__ SearchBar.css
-                          |__ SearchBar.jsx
-                    |__ Thumbnail
-                          |__ Thumbnail.css
-                          |__ Thumbnail.jsx
-                    |__
-                          |__ .css
-                          |__ .jsx
-      |__ LeftPanel
-            |__ LeftPanel.css
-            |__ LeftPanel.jsx
-                |__ Components
-                    |__ UserCard
-                          |__ UserCard.css
-                          |__ UserCard.jsx
-                    |__ Nav
-                          |__ Nav.css
-                          |__ Nav.jsx
-                    |__ DO WE NEED NAV BOXES?
-                          |__ .css
-                          |__ .jsx
-      |__ RightPanel
-            |__ RightPanel.css
-            |__ RightPanel.jsx
-                |__ Components
-                    |__
-                          |__ .css
-                          |__ .jsx
-      |__ CenterPanel
-            |__ CenterPanel.css
-            |__ CenterPanel.jsx
-                |__ Components
-                    |__ ExploreContainer
-                          |__ ExploreContainer.css
-                          |__ ExploreContainer.jsx
-                    |__ ExploreCard
-                          |__ ExploreCard.css
-                          |__ ExploreCard.jsx
-                    |__ CreatePostBanner
-                          |__ CreatePostBanner.css
-                          |__ CreatePostBanner.jsx
-                    |__ CreatePostModal
-                          |__ CreatePostModal.css
-                          |__ CreatePostModal.jsx
-                    |__ Feed
-                          |__ Feed.css
-                          |__ Feed.jsx
-                    |__ PostCard
-                          |__ PostCard.css
-                          |__ PostCard.jsx
-                    |__ PostDetail -- dependent on modal or expandable
-                          |__ PostDetail.css
-                          |__ PostDetail.jsx
+    |__ CenterPanel
+        |__ CenterPanel.css
+        |__ CenterPanel.jsx
+        |__ components
+            |__ CreatePostBanner
+                |__ CreatePostBanner.css
+                |__ CreatePostBanner.jsx
+            |__ CreatePostModal
+                |__ CreatePostModal.css
+                |__ CreatePostModal.jsx
+            |__ ExploreCard
+                |__ ExploreCard.css
+                |__ ExploreCard.jsx
+            |__ ExploreContainer
+                |__ ExploreContainer.css
+                |__ ExploreContainer.jsx
+            |__ Feed
+                |__ Feed.css
+                |__ Feed.jsx
+            |__ PostCard
+                |__ PostCard.css
+                |__ PostCard.jsx
+            |__ PostDetail -- dependent on modal or expandable
+                |__ PostDetail.css
+                |__ PostDetail.jsx
+    |__ LeftPanel
+        |__ LeftPanel.css
+        |__ LeftPanel.jsx
+        |__ components
+            |__ Nav
+                |__ Nav.css
+                |__ Nav.jsx
+            |__ UserCard
+                |__ UserCard.css
+                |__ UserCard.jsx
+            |__ DO WE NEED NAV BOXES?
+                |__ .css
+                |__ .jsx
+    |__ RightPanel
+        |__ RightPanel.css
+        |__ RightPanel.jsx
+        |__ components
+            |__
+                |__ .css
+                |__ .jsx
+    |__ TopBanner
+        |__ TopBanner.css
+        |__ TopBanner.jsx
+        |__ components
+            |__ SearchBar
+                |__ SearchBar.css
+                |__ SearchBar.jsx
+            |__ TagLogo
+                |__ TagLogo.css
+                |__ TagLogo.jsx
+            |__ Thumbnail
+                |__ Thumbnail.css
+                |__ Thumbnail.jsx
+            |__
+                |__ .css
+                |__ .jsx
 
 <!-- Need tutorial/walkthrough, DM -->
 <!-- NEED TO ADD COMPONENTS FOR AUTH -->
 
 |__ containers/
-      |__ MainContainer.jsx
+    |__ MainContainer.jsx
 |__ layout/
-      |__ Layout.css
-      |__ Layout.jsx
-      <!-- Need to confirm single or double layouts depending on state -->
+    |__ Layout.css
+    |__ Layout.jsx
+    <!-- Need to confirm single or double layouts depending on state -->
 |__ screens/
-      |__ LandingPage/
-            |__ LandingPage.css
-            |__ LandingPage.jsx
-      <!-- |__ UserProfile/
-            |__ UserProfile.css
-            |__ UserProfile.jsx --> Will this just be a component?
+    |__ LandingPage/
+        |__ LandingPage.css
+        |__ LandingPage.jsx
+    <!-- |__ UserProfile/
+        |__ UserProfile.css
+        |__ UserProfile.jsx --> Will this just be a component?
 |__ services/
-      |__ apiConfig.js
-      <!-- |__ auth.js -->
-      <!-- |__ posts.js -->
+    |__ apiConfig.js
+    <!-- |__ auth.js -->
+    <!-- |__ posts.js -->
 |__ App.css
 |__ App.js
 |__ index.css
@@ -206,7 +206,7 @@ src
 | Name            | Role                            | Github                           | Portfolio                                      | LinkedIn                                                   |
 | :-------------- | :------------------------------ | :------------------------------- | :--------------------------------------------- | :--------------------------------------------------------- |
 | Johnny Domingo  | Full Stack Engineer             | https://github.com/johnnydomingo | https://www.jdomingo.dev/                      | https://www.linkedin.com/in/johnnydomingo/                 |
-| Julia Dwyer     | Full Stack Engineer             | https://github.com/gooliajulia   | https://juliadwyerportfolio.netlify.app/       | https://www.linkedin.com/in/julia-dwyer-software-engineer/ |
+| Julia Dwyer     | Full Stack Engineer             | https://github.com/gooliajulia   | https://juliadwyer.com/       | https://www.linkedin.com/in/julia-dwyer-software-engineer/ |
 | David Gurule    | Full Stack Engineer             | https://github.com/darclay       | https://david-gurule-jr-portfolio.netlify.app/ | https://www.linkedin.com/in/david-gurule-865624212/        |
 | Paige Hoeppner  | Full Stack Engineer             | https://github.com/thepaiger     | https://www.paigehoeppner.com/                 | https://www.linkedin.com/in/paige-hoeppner/                |
 | Lance Simmons   | Launch Consultant (Engineering) | https://github.com/lancehsimmons | https://lancesimmons.dev/                      | https://www.linkedin.com/in/lance-simmons/                 |

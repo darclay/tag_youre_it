@@ -1,0 +1,103 @@
+.PostCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(229, 228, 226);
+}
+.postContainer {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  background-color: white;
+  border: 1px solid #F7B06E;
+  border-radius: 25px;
+}
+.userLeft {
+  position: absolute;
+  left: 25px;
+  top: -25px;
+}
+.userPic {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.userName {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.tagRight {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+.tagsList {
+  display: flex;
+  gap: .25em;
+}
+.membersList {
+  display: flex;
+  padding-left: 5px;
+}
+/* GOING TO HAVE TO FIGURE OUT HOW TO OVERLAP ICONS PROGRESSIVELY FOR EARCH LIST ITEM IN THE 'membersIcons' UL
+
+perhaps add only 3 or 5 of the users*/
+.second {
+  margin-left: -10px;
+}
+.third {
+  margin-left: -20px;
+}
+/* ------------------------ */
+
+.tagsList li, .membersList li {
+  list-style: none;
+  height: 20px;
+  width: 20px;
+}
+.tagIcons, .memberIcons {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.topBanner {
+  margin-left: 150px;
+  margin-top: 15px;
+}
+.postTitle, .postLocation, .postTime {
+  display: inline;
+  padding-right: 35px;
+}
+.postLocation, .postTime, .postDate {
+  font-size: .75em;
+}
+.postDate, .postDetails {
+  margin-left: 150px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.thoseJoined {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: .75em;
+}
+.joinContainer {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.joinButton {
+  padding: 5px 30px 5px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ACDBA6;
+  font-weight: 900;
+  cursor: pointer;
+}
+
