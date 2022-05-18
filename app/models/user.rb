@@ -2,7 +2,7 @@ class User < ApplicationRecord
     # invitations sent by user
     has_many :invitations
     # invitations received by user
-    has_many :pending_invitations -> { where confirmed: false }, class_name: 'Invitation', foreign_key: "neighbor_id"
+    has_many :pending_invitations, -> { where confirmed: false }, class_name: 'Invitation', foreign_key: "neighbor_id"
     
     # compiles list of all User's neighbors
     def neighbors
