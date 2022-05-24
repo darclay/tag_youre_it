@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_17_211108) do
+ActiveRecord::Schema.define(version: 2022_05_24_222801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,11 @@ ActiveRecord::Schema.define(version: 2022_05_17_211108) do
     t.index ["user_id"], name: "index_invitations_on_user_id"
   end
 
+  create_table "post_followers", id: false, force: :cascade do |t|
+    t.bigint "follower_id", null: false
+    t.bigint "post_id", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "subject"
     t.text "content"
@@ -50,11 +55,6 @@ ActiveRecord::Schema.define(version: 2022_05_17_211108) do
   create_table "posts_tags", id: false, force: :cascade do |t|
     t.bigint "post_id", null: false
     t.bigint "tag_id", null: false
-  end
-
-  create_table "posts_users", id: false, force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "post_id", null: false
   end
 
   create_table "tags", force: :cascade do |t|

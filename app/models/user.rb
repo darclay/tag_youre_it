@@ -2,7 +2,7 @@ class User < ApplicationRecord
     # invitations sent by user
     has_many :invitations
     # invitations received by user
-    has_many :pending_invitations, -> { where confirmed: false }, class_name: 'Invitation', foreign_key: "neighbor_id"
+    has_many :pending_invitations, -> { where is_accepted: false }, class_name: 'Invitation', foreign_key: "neighbor_id"
     
     # compiles list of all User's neighbors
     def neighbors
@@ -20,5 +20,16 @@ class User < ApplicationRecord
         # invitations is referencing all of the invitation instances we connected above with "has_many"
         invitations.create(neighbor_id: user.id)
     end
+
+    def pending_received_invitations
+        Invitation.where(neighbor_id: id, is_accepted: false).pluck(:user_id)
+    end
+
+    def pending_sent_invitations
+        Invitation.where(user_id: id, is_accepted: false).pluck(:neighbor_id)
+    end
+
+
+
 
 end
