@@ -1,5 +1,6 @@
 class Invitation < ApplicationRecord
   belongs_to :user
+  # look into if need to relocate these to controllers (or elsewhere)
 
   # checking if two users have pending or accepted invitations
   # use cases: don't render 'connect' options (render 'pending' instead)
