@@ -1,4 +1,6 @@
 import './TopBanner.css'
+import messageIcon from '../../assets/icons/messageIconColored.png'
+import settingsIcon from '../../assets/icons/settingsIconColored.png'
 
 export default function TopBanner() {
   return (
@@ -9,9 +11,9 @@ export default function TopBanner() {
       <div className="topBannerIconsContainer">
         <ul className="topBannerIcons">
           <li>
-            <img src="#" alt="message icon" />
+            <img src={messageIcon} alt="message icon" />
           </li>
-          <li><img src="#" alt="settings icon" /></li>
+          <li><img src={settingsIcon} alt="settings icon" /></li>
         </ul>
       </div>
     </div>
