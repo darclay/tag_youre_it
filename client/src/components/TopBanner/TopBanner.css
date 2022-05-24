@@ -1,0 +1,14 @@
+.topBannerDiv {
+  height: 69px;
+  width: 100vw;
+  background-color: #ACDBA6;
+}
+.topBannerIconsContainer {
+  position: absolute;
+  right: 25px;
+  top: 26px;
+}
+.topBannerIcons {
+  display: flex;
+  list-style: none;
+}
