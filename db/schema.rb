@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_04_231406) do
+ActiveRecord::Schema.define(version: 2022_05_24_222801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,20 @@ ActiveRecord::Schema.define(version: 2022_05_04_231406) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "invitations", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "neighbor_id"
+    t.boolean "is_accepted", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_invitations_on_user_id"
+  end
+
+  create_table "post_followers", id: false, force: :cascade do |t|
+    t.bigint "follower_id", null: false
+    t.bigint "post_id", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "subject"
     t.text "content"
@@ -41,11 +55,6 @@ ActiveRecord::Schema.define(version: 2022_05_04_231406) do
   create_table "posts_tags", id: false, force: :cascade do |t|
     t.bigint "post_id", null: false
     t.bigint "tag_id", null: false
-  end
-
-  create_table "posts_users", id: false, force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "post_id", null: false
   end
 
   create_table "tags", force: :cascade do |t|
@@ -77,5 +86,6 @@ ActiveRecord::Schema.define(version: 2022_05_04_231406) do
 
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
+  add_foreign_key "invitations", "users"
   add_foreign_key "posts", "users"
 end
