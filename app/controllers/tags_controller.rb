@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  before_action :set_tag, only: [:show, :update, :destroy]
+  before_action :set_tag, only: [:show]
 
   # GET /tags
   def index
@@ -13,30 +13,10 @@ class TagsController < ApplicationController
     render json: @tag
   end
 
-  # POST /tags
-  def create
-    @tag = Tag.new(tag_params)
+# we removed update, create and delete crud methods
+# admins can update Tags via rails console in terminal
 
-    if @tag.save
-      render json: @tag, status: :created, location: @tag
-    else
-      render json: @tag.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /tags/1
-  def update
-    if @tag.update(tag_params)
-      render json: @tag
-    else
-      render json: @tag.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /tags/1
-  def destroy
-    @tag.destroy
-  end
+# potential PMVP -> allow admins to use full crud on Tags on frontend (will need to add these methods back in here)
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -44,8 +24,4 @@ class TagsController < ApplicationController
       @tag = Tag.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
-    def tag_params
-      params.require(:tag).permit(:name)
-    end
 end
