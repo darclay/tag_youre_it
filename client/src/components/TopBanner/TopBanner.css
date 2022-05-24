@@ -5,10 +5,43 @@
 }
 .topBannerIconsContainer {
   position: absolute;
-  right: 25px;
+  right: 60px;
   top: 26px;
 }
 .topBannerIcons {
   display: flex;
   list-style: none;
+  gap: 30px;
 }
+.topBannerIcon {
+  width: 30px;
+}
+.searchBarDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchBar {
+  height: 38px;
+  width: 65%;
+  border: none;
+  border-radius: 5px;
+  padding-left: 30px;
+}
+/* For Chrome */
+.searchBar::-webkit-input-placeholder {
+  color: black;
+  font-weight: bold;
+}
+/* For Firefox */
+.searchBar::-moz-placeholder {
+  color: black;
+  font-weight: bold;
+}
+/* For Internet Explorer: */
+.searchBar:-ms-input-placeholder {
+  color: black;
+  font-weight: bold;
+} 
