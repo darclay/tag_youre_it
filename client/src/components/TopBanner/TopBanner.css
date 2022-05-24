@@ -45,3 +45,10 @@
   color: black;
   font-weight: bold;
 } 
+.show {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: red;
+  transform: translate(35px, -35px);
+}
