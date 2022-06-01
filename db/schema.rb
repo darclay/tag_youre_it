@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 2022_05_24_222801) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.text "content" #required
+    t.text "content"
     t.text "images"
-    t.integer "flag_count" #required, default: 0
+    t.integer "flag_count"
     t.bigint "user_id", null: false
     t.bigint "post_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -29,8 +29,7 @@ ActiveRecord::Schema.define(version: 2022_05_24_222801) do
 
   create_table "invitations", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "neighbor_id" #required??? 
-    #We believe this is required but the blog does not show it as required.
+    t.bigint "neighbor_id"
     t.boolean "is_accepted", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -43,10 +42,10 @@ ActiveRecord::Schema.define(version: 2022_05_24_222801) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "subject" #required
-    t.text "content" #required
+    t.string "subject"
+    t.text "content"
     t.text "images"
-    t.integer "flag_count" #required default: 0
+    t.integer "flag_count"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -59,7 +58,7 @@ ActiveRecord::Schema.define(version: 2022_05_24_222801) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string "name" #required
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -70,17 +69,17 @@ ActiveRecord::Schema.define(version: 2022_05_24_222801) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name" #required
-    t.string "last_name" #required
-    t.string "email" #required
-    t.string "password_digest" #required?? may or may not need this with auth
-    t.text "location" #required
-    t.string "birthday" #required for age confirmation
-    t.text "profile_pic" #pmvp to have avatars 
-    t.text "details" 
-    t.integer "flag_count" #required default: 0
-    t.boolean "is_restricted" #required default: false
-    t.boolean "is_admin" #required default: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "password_digest"
+    t.text "location"
+    t.string "birthday"
+    t.text "profile_pic"
+    t.text "details"
+    t.integer "flag_count"
+    t.boolean "is_restricted"
+    t.boolean "is_admin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
