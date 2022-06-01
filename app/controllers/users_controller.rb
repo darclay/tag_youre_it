@@ -43,11 +43,11 @@ class UsersController < ApplicationController
   end
 
   # GET /users
-  # def index
-  #   @users = User.all
+  def index
+    @users = User.all
     
-  #   render json: @users, except: :password_digest
-  # end
+    render json: @users, except: :password_digest
+  end
 
   # GET /users/1
   # may need to use "where" clause on tags
