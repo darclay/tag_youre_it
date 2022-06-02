@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :create, :update, :destroy]
+  before_action :set_post, only: [:show, :update, :destroy]
 
   # GET /posts
   def index
