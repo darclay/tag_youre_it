@@ -33,10 +33,11 @@ class CommentsController < ApplicationController
     end
   end
 
-  # DELETE /comments/1
-  def destroy
-    @comment.destroy
-  end
+  # # DELETE /comments/1
+  # Will be 'display: none' on frontend
+  # def destroy
+  #   @comment.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

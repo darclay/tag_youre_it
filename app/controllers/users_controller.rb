@@ -77,6 +77,7 @@ class UsersController < ApplicationController
   end
 
   # # DELETE /users/1
+  # isAccountActive 
   # def destroy
   #   @user.destroy
   # end

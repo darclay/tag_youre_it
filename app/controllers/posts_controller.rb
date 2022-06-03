@@ -17,6 +17,7 @@ class PostsController < ApplicationController
   # POST /posts
   # need to address with O-Auth
   def create
+    # @post.user = @current_user
     @post = Post.new(post_params)
 
     if @post.save
@@ -35,10 +36,11 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  def destroy
-    @post.destroy
-  end
+  # # DELETE /posts/1
+  # Will be 'display: none' on frontend
+  # def destroy
+  #   @post.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
