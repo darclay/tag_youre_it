@@ -11,6 +11,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # may need to use "where" clause on tags
   def show
+    # Need to come back to this to associate user information w/ comments in a post
+    # @comments = :comments, include: {user: {only: [:id, :first_name, :last_name, :profile_pic]}}
     render json: @post, include: [{user: {only: [:id, :first_name, :last_name, :profile_pic]}}, :comments, :tags]
   end
 
@@ -19,6 +21,7 @@ class PostsController < ApplicationController
   def create
     # @post.user = @current_user
     @post = Post.new(post_params)
+    # @post.user = @current_user
 
     if @post.save
       render json: @post, status: :created, location: @post
@@ -34,6 +37,12 @@ class PostsController < ApplicationController
     else
       render json: @post.errors, status: :unprocessable_entity
     end
+    # @post = @current_user.posts.find(params[:id])
+    # if @post.update(post_params)
+    #   render json: @post
+    # else
+    #   render json: @post.errors, status: :unprocessable_entity
+    # end
   end
 
   # # DELETE /posts/1
@@ -50,6 +59,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password, :location, :birthday, :profile_pic, :details)
+      params.require(:post).permit(:subject, :content, :images, :flag_count, :user_id)
     end
 end
