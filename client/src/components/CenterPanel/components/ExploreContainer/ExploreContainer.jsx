@@ -37,7 +37,7 @@ export default function ExploreContainer() {
       <h1 className="exploreTitle">EXPLORE TAGS</h1>
 
       <div className="exploreFlexContainer">
-        {tags.map((tag, index)=>(<ExploreCard index={index} tag={tag}/>))}
+        {tags.map((tag, index)=>(<ExploreCard key={index} index={index} tag={tag}/>))}
       </div>
      </div>
   )
