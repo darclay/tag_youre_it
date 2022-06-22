@@ -3,9 +3,17 @@ class User < ApplicationRecord
     has_many :comments
     has_and_belongs_to_many :tags
     # invitations sent by user
-    has_many :invitations
-    # invitations received by user
-    has_many :pending_invitations, -> { where is_accepted: false }, class_name: 'Invitation', foreign_key: "neighbor_id"
+    has_and_belongs_to_many :invitations,
+      class_name: "User",
+      join_table: :invitations,
+      foreign_key: :user_id,
+      association_foreign_key: :neighbor_id
+end
+
+
+
+# invitations received by user
+    # has_many :pending_invitations, -> { where is_accepted: false }, class_name: 'Invitation', foreign_key: "neighbor_id"
     
     # # compiles list of all User's neighbors
     # def neighbors
@@ -31,6 +39,3 @@ class User < ApplicationRecord
     # def pending_sent_invitations
     #     Invitation.where(user_id: id, is_accepted: false).pluck(:neighbor_id)
     # end
-
-
-end
