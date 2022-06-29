@@ -1,5 +1,28 @@
 class InvitationsController < ApplicationController
+  before_action :set_user
+  before_action :set_invitation, only: :show
+
+  # GET /invitations
+  def index 
+    @invitations = @user.invitations
+    # @invitations = Invitations.all
+    render json: @invitations
+  end
   
+  # GET /invitations/1
+    def show 
+      render json: @invitation 
+    end
+
+    private
+    def set_invitation
+      @invitation = @user.invitations.find(params[:id])
+    end
+
+    def set_user
+      @user = User.find(params[:user_id])
+#     @neighbor = User.find(params[:id])
+    end
 end 
   
 # before_action :set_invitation, only: [:show, :update, :destroy]
@@ -19,6 +42,7 @@ end
 
 #     render json: @invitations
 #   end
+
 
 # # GET /invitations/1
 #   def show 

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :comments, only: [:create, :update]
   resources :tags, only: [:index, :show]
+  # resources :users, except: [:index, :destroy]
   resources :users, except: [:index, :destroy] do
-    resources :invitations 
+    resources :invitations, only: [:index, :show] 
   end
   resources :posts, except: :destroy
   

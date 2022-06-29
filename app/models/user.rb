@@ -4,7 +4,7 @@ class User < ApplicationRecord
     has_and_belongs_to_many :tags
     # invitations sent by user
     has_and_belongs_to_many :invitations,
-      class_name: "User",
+      class_name: "Invitation",
       join_table: :invitations,
       foreign_key: :user_id,
       association_foreign_key: :neighbor_id
