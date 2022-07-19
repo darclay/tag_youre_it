@@ -35,6 +35,7 @@ class CommentsController < ApplicationController
 
   # # DELETE /comments/1
   # Will be 'display: none' on frontend
+  # add field for isDeleted
   # def destroy
   #   @comment.destroy
   # end

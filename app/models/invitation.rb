@@ -1,5 +1,5 @@
 class Invitation < ApplicationRecord
-  belongs_to :user
+  has_and_belongs_to_many :user
   # look into if need to relocate these to controllers (or elsewhere)
 
   # checking if two users have pending or accepted invitations
